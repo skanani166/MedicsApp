@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "MedicsApp",
-    "slug": "MedicsApp",
+    "name": "SignUp-App",
+    "slug": "SignUp-App",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
