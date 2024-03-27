@@ -14,9 +14,13 @@ export const CategoryStyle = {
         paddingHorizontal: 15,
         marginTop: 20,
         marginBottom: 10,
-        margin: 20
+        margin: 20,
+        elevation: 3,
+        shadowOffset: { width: -10, height: 10 },
+        shadowOpacity: 0.1,
+        shadowRadius: 8,
     },
-    text: {        
+    text: {
         color: '#878787'
     },
     category: {
@@ -103,7 +107,7 @@ export const DoctorStyle = {
         marginLeft: 25,
         fontSize: 18,
         fontWeight: '600',
-    },                
+    },
     rate: {
         marginTop: 5,
         marginLeft: 25,
@@ -120,14 +124,14 @@ export const DoctorStyle = {
     },
     speciality: {
         color: '#878787',
-        marginLeft: 25 
+        marginLeft: 25
     },
     specialist: {
         color: '#878787',
-        marginLeft: 25 
+        marginLeft: 25
     },
     stock: {
-        marginTop: 5,     
+        marginTop: 5,
     },
 }
 
@@ -145,7 +149,11 @@ export const HomeStyle = {
         paddingHorizontal: 15,
         marginTop: 20,
         marginBottom: 10,
-        margin: 20
+        margin: 20,
+        elevation: 3,
+        shadowOffset: { width: -10, height: 10 },
+        shadowOpacity: 0.1,
+        shadowRadius: 8,
     },
     img: {
         marginTop: -20,
@@ -159,7 +167,7 @@ export const HomeStyle = {
     },
     bg: {
         backgroundColor: '#c6e2dd',
-        marginTop: 15,
+        marginTop: 25,
         margin: 20,
         borderRadius: 10
     },
@@ -190,6 +198,7 @@ export const HomeStyle = {
     },
     topDoc: {
         marginLeft: 20,
+        marginTop: 10,
         fontSize: 18,
         fontWeight: '500'
     },
@@ -206,7 +215,7 @@ export const HomeStyle = {
         borderRadius: 120,
         alignSelf: 'center'
     },
-    name: {        
+    name: {
         marginTop: 10,
         fontSize: 14,
         fontWeight: '500'
@@ -289,7 +298,7 @@ export const Home4ImageStyle = {
         flexDirection: 'row',
     },
     list: {
-        padding: 10,          
+        padding: 10,
         borderWidth: 1,
         borderColor: '#ddd',
         borderRadius: 10,
@@ -325,7 +334,7 @@ export const Home4ImageStyle = {
     },
     speciality: {
         color: '#878787',
-        marginLeft: 25 
+        marginLeft: 25
     },
     address: {
         color: '#878787',
@@ -333,11 +342,11 @@ export const Home4ImageStyle = {
     },
     brand: {
         color: '#878787',
-        marginLeft: 25 
+        marginLeft: 25
     },
     stock: {
-        marginTop: 5,  
-        marginLeft: 25   
+        marginTop: 5,
+        marginLeft: 25
     },
     price: {
         marginLeft: 25,

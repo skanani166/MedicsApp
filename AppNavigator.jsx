@@ -14,10 +14,12 @@ import DoctorDetail from "./Screens/DoctorDetails";
 import Category from "./Screens/Category";
 import Ambulance from "./Screens/Ambulance";
 import BookAmbulance from "./Screens/BookAmbulance";
-import Appointment from "./Screens/Appointment";
 
 import AllItem from "./Screens/AllItem";
 import Details from "./Screens/Details";
+import Appoint from "./Screens/Appointment"
+import Search from "./Screens/Search";
+const { Appointment, TopDoctorAppointment, AllTopDoctorAppointment } = Appoint;
 const { AllArticle, TopDoctor, AllTopDoctor, Artical, Hospital, Pharmacy } = AllItem;
 const { ArticleDetail, AllArticleDetail, TopDoctorDetail, AllTopDoctorDetail, HospitalDetail, PharmacyDetail } = Details
 
@@ -48,7 +50,7 @@ const TabNavigator = () => {
           <Ionicons name="chatbox" size={size} color={color} />
         )
       }} />
-      <Tab.Screen name="Calendar" component={Calender} options={{
+      <Tab.Screen name="Schedule" component={Calender} options={{
         tabBarIcon: ({ color, size }) => (
           <Ionicons name="calendar" size={size} color={color} />
         )
@@ -66,16 +68,19 @@ const StackNavigator = () => {
   return (
     <Stack.Navigator initialRouteName="Home" screenOptions={{ headerTitleAlign: 'center' }}>
       <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
+      <Stack.Screen name="Category" component={Category} />
+      <Stack.Screen name="Search" component={Search} />
       <Stack.Screen name="Doctors" component={Doctor} options={{ headerTitleAlign: 'center' }} />
-      <Stack.Screen name="Appointment" component={Appointment} options={{ headerTitleAlign: 'center' }} />
+      <Stack.Screen name="DoctorDetails" component={DoctorDetail} options={{ title: 'Doctor Detail' }} />
       <Stack.Screen name="Ambulance" component={Ambulance} options={{ title: 'Ambulance' }} />
       <Stack.Screen name="BookAmbulance" component={BookAmbulance} options={{ title: 'Ambulance' }} />
-      <Stack.Screen name="Category" component={Category} />
-      <Stack.Screen name="DoctorDetails" component={DoctorDetail} options={{ title: 'Doctor Detail' }} />
       <Stack.Screen name="Hospital" component={Hospital} />
       <Stack.Screen name="HospitalDetails" component={HospitalDetail} options={{ title: 'Hospital Detail' }} />
       <Stack.Screen name="Pharmacy" component={Pharmacy} />
       <Stack.Screen name="PharmacyDetails" component={PharmacyDetail} options={{ title: 'Pharmacy Detail' }} />
+      <Stack.Screen name="Appointment" component={Appointment} options={{ title: 'Appointment' }} />
+      <Stack.Screen name="TopDoctorAppointment" component={TopDoctorAppointment} options={{ title: 'TopDoctor Appointment' }} />
+      <Stack.Screen name="AllTopDoctorAppointment" component={AllTopDoctorAppointment} options={{ title: 'TopDoctor Appointment' }} />
 
       <Stack.Screen name="TopDoctor" component={TopDoctor} options={{ title: 'Top Doctor Detail' }} />
       <Stack.Screen name="TopDoctorDetails" component={TopDoctorDetail} options={{ title: 'Top Doctor Detail' }} />

@@ -4,27 +4,6 @@ import { AllTopDoctorData, TopDoctorData } from "../Data";
 import { CategoryStyle } from "../assets/CSS/Style";
 
 const Doctor = ({ navigation }) => {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [filteredCategories, setFilteredCategories] = useState([]);
-
-    const categories = [
-        { id: 1, name: 'General' },
-        { id: 2, name: 'Lungs' },
-        { id: 3, name: 'Dental' },
-        { id: 4, name: 'Psycho' },
-        { id: 5, name: 'Covid' },
-        { id: 6, name: 'Surgeon' },
-        { id: 7, name: 'Cardio' },
-    ];
-
-    const handleSearch = (text) => {
-        setSearchTerm(text);
-        const filtered = categories.filter(category =>
-            category.name.toLowerCase().includes(text.toLowerCase())
-        );
-        setFilteredCategories(filtered);
-    };
-
     const handleTopDoctorPress = (topDoctorId) => {
         navigation.navigate('TopDoctorDetails', { topDoctorId });
     };
@@ -36,12 +15,9 @@ const Doctor = ({ navigation }) => {
     return (
         <ScrollView>
             <View>
-                <TextInput
-                    style={style.searchInput}
-                    placeholder="Search..."
-                    value={searchTerm}
-                    onChangeText={handleSearch}
-                />
+                <TouchableOpacity onPress={() => navigation.navigate('Search')}>
+                    <View style={style.searchInput}></View>
+                </TouchableOpacity>
 
                 <Text style={style.category}>Category</Text>
                 <View style={[style.container, { marginBottom: -20 }]}>

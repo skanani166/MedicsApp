@@ -511,7 +511,7 @@ export const TopDoctorDetailStyle = {
     button: {
         width: '70%',
         height: 50,
-        marginTop: 20,
+        marginTop: 35,
         backgroundColor: '#199A8E',
         borderRadius: 20,
         justifyContent: 'center',
@@ -543,7 +543,7 @@ export const TopDoctorDetailStyle = {
     buttonText: {
         color: '#FFFFFF',
         fontSize: 20,
-        fontWeight: '400'
+        fontWeight: '400',
     },
 }
 

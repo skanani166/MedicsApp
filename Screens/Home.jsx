@@ -1,52 +1,15 @@
 import { FlatList, Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { ArticleData, TopDoctorData } from "../Data";
-import { useEffect, useState } from "react";
 import { HomeStyle } from "../assets/CSS/Style";
 
 const Home = ({ navigation }) => {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [filteredTopDoctors, setFilteredTopDoctors] = useState(TopDoctorData);
-    const [filteredArticles, setFilteredArticles] = useState(ArticleData);
-
-    const handleTopDoctorPress = (topDoctorId) => {
-        navigation.navigate('TopDoctorDetails', { topDoctorId });
-    };
-
-    const handleArticlePress = (articleId) => {
-        navigation.navigate('ArticleDetails', { articleId });
-    };
-
-    useEffect(() => {
-        const filterTopDoctors = () => {
-            const filteredDoctors = TopDoctorData.filter(doctor =>
-                doctor.name.toLowerCase().includes(searchTerm.toLowerCase())
-            );
-            setFilteredTopDoctors(filteredDoctors);
-        };
-
-        const filterArticles = () => {
-            const filteredArticles = ArticleData.filter(article =>
-                article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                article.body.toLowerCase().includes(searchTerm.toLowerCase())
-            );
-            setFilteredArticles(filteredArticles);
-        };
-
-        filterTopDoctors();
-        filterArticles();
-    }, [searchTerm]);
-
     return (
         <ScrollView>
             <View style={style.full}>
                 <Text style={style.upText}>{`Find your desire \nhealth solution`}</Text>
-                              
-                <TextInput
-                    style={style.searchInput}
-                    placeholder="Search..."
-                    value={searchTerm}
-                    onChangeText={setSearchTerm}
-                />
+                <TouchableOpacity onPress={() => navigation.navigate('Search')}>
+                    <View style={style.searchInput}></View>
+                </TouchableOpacity>
 
                 <View style={style.container}>
                     <TouchableOpacity onPress={() => navigation.navigate('Doctors', { Doctor: 'Doctor' })}>
@@ -100,7 +63,7 @@ const Home = ({ navigation }) => {
                     <Text style={style.seeAll}>see all</Text>
                 </TouchableOpacity>
                 <FlatList
-                showsVerticalScrollIndicator={false}
+                    showsVerticalScrollIndicator={false}
                     data={ArticleData}
                     renderItem={({ item }) => (
                         <TouchableOpacity onPress={() => handleArticlePress(item.id)}>

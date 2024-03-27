@@ -133,6 +133,7 @@ export const GeneralDoctorData = {
         }
     ]
 }
+
 import Lungs_1 from "./assets/Image/Lungs_1.png"
 import Lungs_2 from "./assets/Image/Lungs_2.png"
 import Lungs_3 from "./assets/Image/Lungs_3.png"
@@ -1245,7 +1246,10 @@ export const AllTopDoctorData = [
         "experience": "20 Years",
         "rate": 4.5,
         "distance": "2.5km",
-        "about": "Dr. Ajaya Nand is a highly skilled neurosurgeon with over 20 years of experience in the field. He specializes in various neurosurgical procedures and is known for his expertise in treating complex neurological conditions. Dr. Nand is committed to providing personalized care and achieving the best possible outcomes for his patients.",
+        "about": "Dr. Ajaya Nand is a highly skilled neurosurgeon with over 20 years of experience in the field. He specializes in various neurosurgical procedures and is known for his expertise in treating complex neurological conditions. Dr. Nand is committed to providing personali and is known for his expertise in treating complex neurologized care and achieving the best possible outcomes for his patients.",
+        "reason": "Headache and migraines",
+        "consultation": 200,
+        "adminFee": 20,
         "image": Top_1
     }, {
         "id": 2,
@@ -1255,7 +1259,10 @@ export const AllTopDoctorData = [
         "experience": "8 years",
         "rate": 4.2,
         "distance": "1.8km",
-        "about": "Dr. Rohit Sharma is a skilled cardiologist with 8 years of experience in diagnosing and treating various cardiac conditions. He is known for his compassionate approach and dedication to providing high-quality care to his patients. Dr. Sharma stays updated with the latest advancements in cardiology to ensure optimal treatment outcomes.",
+        "about": "Dr. Rohit Sharma is a skilled cardiologist with 8 years of experience in diagnosing and treating various cardiac conditions. He is known for his compassionate approach and dedication to providing high-quality care to his patients. Dr. Sharma stays updated with the latest advancements in cardiology ng high-quality care to his patients. Dr. Sharma stays updated with to ensure optimal treatment outcomes.",
+        "reason": "Heart disease prevention",
+        "consultation": 180,
+        "adminFee": 15,
         "image": Top_2
     }, {
         "id": 3,
@@ -1266,6 +1273,9 @@ export const AllTopDoctorData = [
         "rate": 4.0,
         "distance": "3.0km",
         "about": "Dr. Manish Gupta is a dedicated urologist with 5 years of experience in diagnosing and treating urological disorders. He specializes in minimally invasive urological surgeries and is committed to providing comprehensive care to his patients. Dr. Gupta is known for his patient-centered approach and strives to ensure the comfort and well-being of his patients.",
+        "reason": "Kidney stones",
+        "consultation": 150,
+        "adminFee": 10,
         "image": Top_3
     }, {
         "id": 4,
@@ -1276,6 +1286,9 @@ export const AllTopDoctorData = [
         "rate": 4.3,
         "distance": "2.3km",
         "about": "Dr. Abhijit Dey is a skilled cardiologist with 7 years of experience in managing various cardiac conditions. He is known for his expertise in interventional cardiology and is dedicated to providing comprehensive and compassionate care to his patients. Dr. Dey believes in a patient-centered approach and strives to ensure the best possible outcomes for his patients.",
+        "reason": "Arrhythmias",
+        "consultation": 190,
+        "adminFee": 20,
         "image": Top_4
     }, {
         "id": 5,
@@ -1286,6 +1299,9 @@ export const AllTopDoctorData = [
         "rate": 4.8,
         "distance": "1.5km",
         "about": "Dr. Sucheta Singh is a renowned gynaecologist with over 15 years of experience in providing comprehensive care to women. She specializes in managing high-risk pregnancies, gynaecological cancers, and reproductive health issues. Dr. Singh is known for her compassionate approach and dedication to improving the health and well-being of her patients.",
+        "reason": "Prenatal care",
+        "consultation": 220,
+        "adminFee": 25,
         "image": Top_5
     }, {
         "id": 6,

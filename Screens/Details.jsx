@@ -120,7 +120,7 @@ const TopDoctorDetail = ({ route }) => {
     }
 
     const handleAppointment = () => {
-        navigation.navigate('Appointment', { topDoctor, selectedDate, selectedTime, consultationFee: topDoctor.consultation, adminFee: topDoctor.adminFee });
+        navigation.navigate('TopDoctorAppointment', { topDoctor, selectedDate, selectedTime, consultationFee: topDoctor.consultation, adminFee: topDoctor.adminFee });
     };
 
     return (
@@ -224,7 +224,7 @@ const AllTopDoctorDetail = ({ route }) => {
     }
 
     const handleAppointment = () => {
-        navigation.navigate('Appointment', { allTopDoctor, selectedDate, selectedTime, consultationFee: allTopDoctor.consultation, adminFee: allTopDoctor.adminFee });
+        navigation.navigate('AllTopDoctorAppointment', { allTopDoctor, selectedDate, selectedTime, consultationFee: allTopDoctor.consultation, adminFee: allTopDoctor.adminFee });
     };
 
     return (
@@ -247,12 +247,12 @@ const AllTopDoctorDetail = ({ route }) => {
             <Text style={TopDoctorStyle.admin}>Admin Fee</Text>
             <Text style={TopDoctorStyle.adminText}> {allTopDoctor.adminFee}</Text>
             <View>
-                <TouchableOpacity onPress={showDatePicker} style={style.selectbutton1}>
-                    <Text style={style.selectText}>Select Date</Text>
+                <TouchableOpacity onPress={showDatePicker} style={TopDoctorStyle.selectbutton1}>
+                    <Text style={TopDoctorStyle.selectText}>Select Date</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={showTimePicker} style={style.selectbutton2}>
-                    <Text style={style.selectText}>Select Time</Text>
+                <TouchableOpacity onPress={showTimePicker} style={TopDoctorStyle.selectbutton2}>
+                    <Text style={TopDoctorStyle.selectText}>Select Time</Text>
                 </TouchableOpacity>
 
                 <DateTimePickerModal
@@ -268,8 +268,8 @@ const AllTopDoctorDetail = ({ route }) => {
                     onCancel={hideTimePicker}
                 />
                 <TouchableOpacity onPress={handleAppointment} disabled={!selectedDate || !selectedTime}>
-                    <View style={style.button}>
-                        <Text style={style.buttonText}>Book Appointment</Text>
+                    <View style={TopDoctorStyle.button}>
+                        <Text style={TopDoctorStyle.buttonText}>Book Appointment</Text>
                     </View>
                 </TouchableOpacity>
             </View>
