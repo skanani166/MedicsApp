@@ -3,13 +3,13 @@ import { View, Text, StyleSheet, Image,TextInput, TouchableOpacity, ScrollView }
 
 
 
-const HomeScreen = () => {
+export default function HomeScreen({navigation}){
     return(
         <ScrollView>
        <View>
       
     <View style={{backgroundColor:'#F9F9F9'}}>
-   
+
         <View style={{flexDirection:'row'}}>
         <Text style={style.text}>Find your desire health solution </Text>
         {/* <Text style={style.text1}>health solution</Text> */}
@@ -114,7 +114,7 @@ const HomeScreen = () => {
     </ScrollView>
     )
 }
-export default HomeScreen;
+
  const style = StyleSheet.create({
     text:{
         marginTop:80,
@@ -132,7 +132,7 @@ export default HomeScreen;
     bell:{
         width:25,
         height:25,
-        marginTop:90,
+        marginTop:95,
         marginLeft:-25
     },
     search:{

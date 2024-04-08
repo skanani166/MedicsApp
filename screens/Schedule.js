@@ -1,36 +1,74 @@
-import React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import React, {useState} from "react";
+import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 
 
-const Schedule = () => {
+export default function Schedule({navigation}){
+    const [Upcoming, useUpcoming] = useState(true)
+    const [Completed, useCompleted] = useState(false)
+    const [Canceled, useCanceled] = useState(false)
     return(
         <View>
             <View style={{flexDirection:'row'}}>
             <Text style={style.message}>Schedule</Text>
             <Image source={require('../assets/bell.png')} style={style.searchIcon}/>
         </View>
-        <View style={{flexDirection:'row'}}>
-            <View style={style.box}>
-                <Text style={style.text}>Upcoming</Text>
-            </View>
-            <View style={style.box1}>
-                <Text style={style.text1}>Completed</Text>
-            </View>
-            <View style={style.box1}>
-                <Text style={style.text2}>Canceled</Text>
-            </View>
-          
-        </View>
-        <View style={style.box2}>
-            <Image source={require('../assets/doctor3.png')} style={style.image} />
-            <Text style={style.name}>Dr. Marcus Horizon</Text>
-            <Text style={style.text3}>Chardiologist</Text>
-            <Image source={require('../assets/calendar.png ')}/> 
-        </View>
-        </View>
+        <View style={{ flexDirection: 'row' }}>
+                    <TouchableOpacity onPress={() => {
+                        useUpcoming(true)
+                        useCompleted(false)
+                        useCanceled(false)
+                    }}>
+
+                        <View style={Upcoming ? style.box : style.box1}>
+                            <Text style={Upcoming ? style.btntext : style.btntext1}>Upcoming</Text>
+                        </View>
+                    </TouchableOpacity>
+                  
+                    
+                    <TouchableOpacity onPress={() => {
+                        useUpcoming(false)
+                        useCompleted(true)
+                        useCanceled(false)
+                    }}>
+
+                        <View style={Completed ? style.box : style.box1}>
+                            <Text style={Completed ? style.btntext : style.btntext1}>Completed</Text>
+                        </View>
+                    </TouchableOpacity>
+                 
+                   
+                    <TouchableOpacity onPress={() => {
+                        useUpcoming(false)
+                        useCompleted(false)
+                        useCanceled(true)
+                    }}>
+
+                        <View style={Canceled ? style.box : style.box1}>
+                            <Text style={Canceled ? style.btntext : style.btntext1}>Canceled</Text>
+                        </View>
+                    </TouchableOpacity>
+                    </View>
+                    {
+                    Upcoming ?
+                        <View style={{alignItems:'center',justifyContent:'center'}}>
+                            <Text>hello</Text>
+                        </View> : null
+                    }
+                    {
+                    Completed ?
+                        <View style={{alignItems:"center",justifyContent:'center'}}>
+                            <Text>hello1</Text>
+                        </View> : null
+                    }
+                    {
+                    Canceled ?
+                        <View style={{alignItems:'center',justifyContent:'center'}}>
+                            <Text>hello2</Text>
+                        </View> : null
+                    }
+       </View>
     ) 
 }
- export default Schedule;
  const style = StyleSheet.create({
     message:{
         fontSize:25,
@@ -46,69 +84,32 @@ const Schedule = () => {
         marginTop:90,
         
     },
-    box:{
-        width:116,
-        height:50,
-        alignItems:'center',
-        justifyContent:'center',
-        marginLeft:20,
-        marginTop:50,
-        borderRadius:10,  
-        backgroundColor:'#199A8E'
+    box: {
+        height: 40,
+        width: 110,
+        backgroundColor: '#199A8E',
+        marginLeft: 20,
+        borderRadius: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 30
     },
-    text:{
-        fontSize:16,
-        fontWeight:'bold',
-        color:'#FFFFFF',
-        
-       
+
+    box1: {
+        height: 40,
+        width: 110,
+        backgroundColor: '#ffffff',
+        marginLeft: 10,
+        borderRadius: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 25
     },
-    box1:{
-        width:116,
-        height:50,
-        alignItems:'center',
-        justifyContent:'center',
-        backgroundColor:'#E8F3F1',
-        marginTop:50,
-        borderRadius:10
+    btntext: {
+        color: '#ffffff',
     },
-    text1:{
-        fontSize:16,
-        fontWeight:'Regular',
-        color:'#101623',
-        
+    btntext1: {
+        color: '#000000',
     },
-    text2:{
-        fontSize:16,
-        fontWeight:'Regular',
-        color:'#101623',
-        
-    },
-    box2:{
-        width:345,
-        height:179,
-        borderWidth:1,
-        marginLeft:20,
-        marginTop:40,
-        borderRadius:10,
-        borderColor:'#E8F3F1',
-    },
-    image:{
-        width: 80,
-         height: 80,
-         borderRadius: 80/ 2,
-         marginTop:20,
-         marginLeft:250
-    },
-    name:{
-        marginTop:-80,
-        marginLeft:20,
-        fontSize:18,
-        fontWeight:'bold',
-    },
-    text3:{
-        marginLeft:20,
-        fontSize:12,
-        color:'#ADADAD'
-    }
+    
  })

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, Image, TextInput, Button, Modal, TouchableOpacity } from "react-native";
-import backImg from './assets/back (1).png';
-import done from './assets/Done.png';
+import backImg from '../assets/back (1).png';
+import done from '../assets/Done.png';
 import CheckBox from 'react-native-check-box';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
