@@ -33,7 +33,7 @@ const Schedule = ({ navigation }) => {
                 <ScrollView showsVerticalScrollIndicator={false}>
                     <View>
                         {doctorData.map((doctor, index) => (
-                            <TouchableOpacity key={index} onPress={() => handleDoctorPress(doctor)}>
+                            <TouchableOpacity key={index} >
                                 <View style={{ flexDirection: 'row', padding: 10 }}>
                                     <Image source={doctor.image} style={{ height: 80, width: 80, borderRadius: 50 }} />
                                     <View style={{ padding: 10 }}>
