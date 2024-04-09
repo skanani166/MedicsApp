@@ -74,7 +74,6 @@ const StackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={{ headerTitleAlign: 'center' }} >
       <Stack.Screen name='Home' component={Home} options={{ headerShown: false }} />
-      <Stack.Screen name="Search" component={Search} options={{ headerShown: false }} />
       <Stack.Screen name="Doctors" component={Doctor} />
       <Stack.Screen name="DoctorData" component={DoctorData} />
       <Stack.Screen name="Appointment" component={Appointment} />
@@ -88,6 +87,7 @@ const StackNavigator = () => {
       <Stack.Screen name="Pharmacy" component={PharmacyData} />
       <Stack.Screen name="PharmacyDetail" component={PharmacyDetail} options={{ title: 'Pharmacy Details' }} />
       <Stack.Screen name="MyCart" component={MyCart} options={{ title: 'My Cart' }} />
+      <Stack.Screen name="Search" component={Search} options={{ headerShown: false }} />
     </Stack.Navigator>
   )
 }

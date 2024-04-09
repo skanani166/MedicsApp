@@ -64,6 +64,7 @@ export const PharmacyStyle = {
         alignSelf: 'center',
         marginTop: 20,
         marginBottom: 20,
+        justifyContent: 'center'
     },
     bg: {
         backgroundColor: '#c6e2dd',

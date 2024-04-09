@@ -16,6 +16,7 @@ export const HomeStyle = {
         borderRadius: 10,
         alignSelf: 'center',
         marginTop: 20,
+        justifyContent: 'center'
     },
     img: {
         marginTop: -20,
