@@ -6,15 +6,17 @@ const Doctor = ({ navigation }) => {
     const handleTopDoctorPress = (topDoctorId) => {
         navigation.navigate('DetailsScreen', { itemId: topDoctorId, type: 'recommand' });
     };
+    const handleSearch = () => {
+        navigation.navigate('Search')
+    }
 
     return (
         <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.container}>
-                <TouchableOpacity onPress={navigation.navigate('Search')}>
-                    <TextInput
-                        style={styles.searchInput}
-                        placeholder="Search..."
-                    />
+                <TouchableOpacity onPress={handleSearch}>
+                    <View style={styles.searchInput}>
+                        <Text>Search</Text>
+                    </View>
                 </TouchableOpacity>
 
                 <Text style={styles.category}>Category</Text>

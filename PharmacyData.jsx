@@ -19,14 +19,17 @@ const PharmacyData = () => {
         navigation.navigate('PharmacyDetail', { pharmacy });
     };
 
+    const handleSearch = () => {
+        navigation.navigate('Search')
+    }
+
     return (
         <View style={styles.container}>
-            <TouchableOpacity onPress={navigation.navigate('Search')}>
-                <TextInput
-                    style={styles.searchInput}
-                    placeholder="Search..."
-                />
-            </TouchableOpacity>
+            <TouchableOpacity onPress={handleSearch}>
+                    <View style={styles.searchInput}>
+                        <Text>Search</Text>
+                    </View>
+                </TouchableOpacity>
 
             <View style={styles.bg}>
                 <Text style={styles.text}>{`Order quickly with\nPrescription`}</Text>

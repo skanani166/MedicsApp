@@ -19,6 +19,7 @@ export const CategoryStyle = {
         borderRadius: 10,
         alignSelf: 'center',
         marginTop: 20,
+        justifyContent: 'center'
     },
     text: {
         color: '#878787'

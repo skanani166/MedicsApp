@@ -36,15 +36,18 @@ const Home = ({ navigation }) => {
         dispatch(fetchArticleData());
     }, [dispatch])
 
+    const handleSearch = () => {
+        navigation.navigate('Search')
+    }
+
     return (
         <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.container}>
                 <Text style={styles.upText}>{`Find your desire \nhealth solution`}</Text>
-                <TouchableOpacity onPress={navigation.navigate('Search')}>
-                    <TextInput
-                        style={styles.searchInput}
-                        placeholder="Search..."
-                    />
+                <TouchableOpacity onPress={handleSearch}>
+                    <View style={styles.searchInput}>
+                        <Text>Search</Text>
+                    </View>
                 </TouchableOpacity>
 
                 <View style={styles.box}>
